@@ -1,0 +1,70 @@
+﻿@model InputSelectionDemo.Models.FormCollection
+
+@{
+    ViewData["Title"] = "PatientReg";
+}
+
+<h1>PatientReg</h1>
+
+<h4>TPatient</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="patient" asp-action="add_patientreg" method="post" >
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @foreach (var item in Model.PatientsCheckList)
+            {
+                if (item.IsPatientNameChkd == true)
+                {
+                    <div class="form-group">
+                        <label asp-for="Patient.PatientName" class="control-label">@((!string.IsNullOrEmpty(item.PatientNameLabel)) ? item.PatientNameLabel : "")</label>
+                        <input asp-for="Patient.PatientName" class="form-control" />
+                        <span asp-validation-for="Patient.PatientName" class="text-danger"></span>
+                    </div>
+                }
+                if (item.IsPatientEmailChkd == true)
+                {
+                    <div class="form-group">
+                        <label asp-for="Patient.PatientEmail" class="control-label"></label>
+                        <input asp-for="Patient.PatientEmail" class="form-control" />
+                        <span asp-validation-for="Patient.PatientEmail" class="text-danger"></span>
+                    </div>
+                }
+
+                if (item.IsPatientGenderChkd == true)
+                {
+                    <div class="form-group">
+                        <label asp-for="Patient.PatientGender" class="control-label"></label>
+                        <input asp-for="Patient.PatientGender" class="form-control" />
+                        <span asp-validation-for="Patient.PatientGender" class="text-danger"></span>
+                    </div>
+                }
+
+                if (item.IsPatientAddressChkd == true)
+                {
+                    <div class="form-group">
+                        <label asp-for="Patient.PatientAddress" class="control-label"></label>
+                        <input asp-for="Patient.PatientAddress" class="form-control" />
+                        <span asp-validation-for="Patient.PatientAddress" class="text-danger"></span>
+                    </div>
+                }
+            }
+            @foreach (var item in Model.CustomFieldDefns)
+            {
+                <div class="form-group">
+                    <label class="control-label">@item.Label</label>
+                    <input  name="labels" value="@item.Label" hidden/>
+                    <input name="customvalues" class="form-control" />
+                </div>
+            }
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

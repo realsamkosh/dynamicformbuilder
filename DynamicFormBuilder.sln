@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.705
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericUIControls", "GenericUIControls\GenericUIControls.csproj", "{8B57C2E5-6A5F-4DE8-AF63-75ED3E74079F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InputSelectionDemo", "InputSelectionDemo\InputSelectionDemo.csproj", "{CE754774-53CA-48E5-82EC-665F4A20B487}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B57C2E5-6A5F-4DE8-AF63-75ED3E74079F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B57C2E5-6A5F-4DE8-AF63-75ED3E74079F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B57C2E5-6A5F-4DE8-AF63-75ED3E74079F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B57C2E5-6A5F-4DE8-AF63-75ED3E74079F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE754774-53CA-48E5-82EC-665F4A20B487}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE754774-53CA-48E5-82EC-665F4A20B487}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE754774-53CA-48E5-82EC-665F4A20B487}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE754774-53CA-48E5-82EC-665F4A20B487}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {868EC50C-FEBB-4977-92E6-129BD00B07D7}
+	EndGlobalSection
+EndGlobal
